@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 # loss_summary
 A simple summary of loss functions in machine learning
 
@@ -49,7 +47,7 @@ $$MSE = \frac{\sum_{n}^{1}(y_{i} - \hat{y}_{i})^{2}}{n}$$
 * more robust to outliers
 * hard to calculate the gradients
 
-$$MAE = \frac{\sum_{n}^{1}\left |y_{i} - \hat{y}_{i}  \right |}{n}$$
+MAE = \frac{\sum_{n}^{1}\left |y_{i} - \hat{y}_{i}  \right |}{n}
 
 ## Classification Losses
 ### Hinge Loss/Multi class SVM Loss
