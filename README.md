@@ -47,7 +47,7 @@ $$MSE = \frac{\sum_{n}^{1}(y_{i} - \hat{y}_{i})^{2}}{n}$$
 * more robust to outliers
 * hard to calculate the gradients
 
-MAE = \frac{\sum_{n}^{1}\left |y_{i} - \hat{y}_{i}  \right |}{n}
+$$MAE = \frac{\sum_{n}^{1}\left |y_{i} - \hat{y}_{i}  \right |}{n}$$
 
 ## Classification Losses
 ### Hinge Loss/Multi class SVM Loss
@@ -58,6 +58,6 @@ $$hingloss =\sum_{j\neq y_i}max(0, s_j - s_y +1)$$
 
 ### Cross Entropy Loss
 $$CrossEntropyLoss = -\frac{1}{n}\sum(y_ilog(\hat{y_i})) +(1-y_i)log(1-\hat{y_i}))$$
-    if $M > 2$ (i.e. multiclass classification), we calculate a separate loss for each class label per obeservation and sum the results:
+  if $M > 2$ (i.e. multiclass classification), we calculate a separate loss for each class label per obeservation and sum the results:
 
 $$mulCrossEntropyLoss = -\frac{1}{n}\sum_{1}^{n}\sum_{1}^{M}y_{i, c}log(p_{i,c})$$
