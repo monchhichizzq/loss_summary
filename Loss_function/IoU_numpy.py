@@ -96,4 +96,5 @@ def CIou(box1, box2):
     alpha = v/(S+v)
 
     ciou = diou - alpha*v
+    ciou = np.clip(ciou, -1.0, 1.0)
     return ciou
