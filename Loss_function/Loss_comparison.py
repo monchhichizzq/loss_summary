@@ -10,6 +10,7 @@
 # DIoU
 # CIoU
 import sys
+sys.path.append('..')
 from prettytable import PrettyTable
 # reload(sys)
 # sys.setdefaultencoding('utf8')
@@ -47,7 +48,7 @@ if __name__=='__main__':
 
     boxes1 = tf.constant([[4.0, 3.0, 7.0, 5.0], [5.0, 6.0, 10.0, 7.0]])
     boxes2 = tf.constant([[3.0, 4.0, 6.0, 8.0], [14.0, 14.0, 15.0, 15.0]])
-    plot_rects(boxes1.numpy(), boxes2.numpy())
+    # plot_rects(boxes1.numpy(), boxes2.numpy())
 
     # IoU
     start = time.time()

@@ -58,15 +58,12 @@ def xiou_loss(y_pred, y_true, mode: str = "xiou") -> tf.Tensor:
     if not y_pred.dtype.is_floating:
         y_pred = tf.cast(y_pred, tf.float32)
     y_true = tf.cast(y_true, y_pred.dtype)
-    if mode == 'iou' or 'giou':
-        giou = tf.squeeze(_calculate_giou(y_pred, y_true, mode))
-        return 1 - giou
-    elif mode == 'diou':
-        pass
-    elif mode == 'ciou':
-        pass
+ 
+    xiou = tf.squeeze(_calculate_xiou(y_pred, y_true, mode))
+    return 1 - xiou
 
-def _calculate_giou(b1, b2, mode: str = "giou") -> tf.Tensor:
+
+def _calculate_xiou(b1, b2, mode: str = "giou") -> tf.Tensor:
     """
     Args:
         b1: bounding box. The coordinates of the each bounding box in boxes are
